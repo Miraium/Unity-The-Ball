@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 	public int StageNo;
@@ -65,6 +66,11 @@ public class GameManager : MonoBehaviour {
 
 	// バックボタンが押された場合の処理
 	public void PushBackButton(){
-		
+		// GobackStageSelectでステージセレクトシーンに戻る
+		GobackStageSelect();
+	}
+
+	void GobackStageSelect(){
+		SceneManager.LoadScene("StageSelectScene");
 	}
 }
