@@ -62,4 +62,9 @@ public class GameManager : MonoBehaviour {
 		// 1回だけ効果音を鳴らす
 		audioSource.PlayOneShot(clearSE);
 	}
+
+	// バックボタンが押された場合の処理
+	public void PushBackButton(){
+		
+	}
 }
