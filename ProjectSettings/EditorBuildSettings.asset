@@ -4,4 +4,16 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/StageSelectScene.unity
+    guid: 6731ab38f6407d8438be1a18321cf202
+  - enabled: 1
+    path: Assets/Scenes/PuzzleScene1.unity
+    guid: db5ba6bd90dc2cd4b9142c4c3b1019c6
+  - enabled: 1
+    path: Assets/Scenes/PuzzleScene2.unity
+    guid: 29abb50d64709bd4ca9014774420deb3
+  - enabled: 1
+    path: Assets/Scenes/PuzzleScene3.unity
+    guid: a774d8e30cd4a794aa423dbcd0522243
