@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour {
 		isBallMoving = true;
 	}
 
+	// Retryボタンを推したときの処理
 	public void PushRetryButton(){
 		Destroy(ball);
 
@@ -40,5 +41,10 @@ public class GameManager : MonoBehaviour {
 		goButton.SetActive(true);
 		retryButton.SetActive(false);
 		isBallMoving = false;
+	}
+
+	// ステージクリア処理
+	public void StageClear(){
+
 	}
 }
