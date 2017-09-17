@@ -62,6 +62,17 @@ public class GameManager : MonoBehaviour {
 
 		// 1回だけ効果音を鳴らす
 		audioSource.PlayOneShot(clearSE);
+
+		// プレイヤーがどのステージまでクリアしたのか記録
+		if (PlayerPrefs.GetInt("CLEAR", 0) < StageNo)
+		{
+			// セーブされているステージNoより今のステージNoが大きければ
+			// ステージナンバーを記録する
+			PlayerPrefs.SetInt("CLEAR", StageNo);
+		}
+
+		// ３秒後に自動的にステージセレクト画面へ戻る
+		Invoke("GobackStageSelect", 3.0f);
 	}
 
 	// バックボタンが押された場合の処理
