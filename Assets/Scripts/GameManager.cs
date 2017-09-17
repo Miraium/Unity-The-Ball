@@ -11,6 +11,10 @@ public class GameManager : MonoBehaviour {
 	public GameObject goButton;
 	public GameObject retryButton;
 
+	// クリア時のテキスト
+	public GameObject clearText;
+
+
 	// Use this for initialization
 	void Start () {
 		retryButton.SetActive(false);
@@ -45,6 +49,9 @@ public class GameManager : MonoBehaviour {
 
 	// ステージクリア処理
 	public void StageClear(){
-
+		// クリア時のテキストをアクティブにすると，テキストが下から現れる．
+		// アニメーションは，非アクティブのときは停止しており，アクティブになった瞬間から再生が開始される．
+		clearText.SetActive(true);
+		retryButton.SetActive(false);
 	}
 }
