@@ -14,12 +14,17 @@ public class GameManager : MonoBehaviour {
 	// クリア時のテキスト
 	public GameObject clearText;
 
-
+	// オーディオソース
+	private AudioSource audioSource;
+	public AudioClip clearSE;
 	// Use this for initialization
 	void Start () {
+		// ゲームの初期状態
 		retryButton.SetActive(false);
 		isBallMoving = false;
 		
+		// オーディオソースを取得しておく
+		audioSource = gameObject.GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -53,5 +58,8 @@ public class GameManager : MonoBehaviour {
 		// アニメーションは，非アクティブのときは停止しており，アクティブになった瞬間から再生が開始される．
 		clearText.SetActive(true);
 		retryButton.SetActive(false);
+
+		// 1回だけ効果音を鳴らす
+		audioSource.PlayOneShot(clearSE);
 	}
 }
